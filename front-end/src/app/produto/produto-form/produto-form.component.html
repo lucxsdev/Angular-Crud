@@ -1,0 +1,72 @@
+<h1>{{ titulo }}</h1>
+
+<form #form="ngForm">
+  
+  <mat-form-field>
+    <mat-label>Categoria</mat-label>
+    <mat-select 
+      [(ngModel)]="produto.categoria" 
+      name="categoria"
+      placeholder="Selecione a categoria"
+      
+    >
+      <mat-option *ngFor="let categoria of categorias" [value]="categoria._id">
+        {{categoria.nome}} 
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+   
+  <mat-form-field>
+    <mat-label>Quantidade</mat-label>
+    <input matInput 
+      name="quantidade"
+      required 
+      placeholder="Informe a quantidade do produto" 
+      [(ngModel)]="produto.quantidade" 
+    />
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Título</mat-label>
+    <input matInput 
+      name="titulo"
+      required 
+      placeholder="Informe titulo" 
+      [(ngModel)]="produto.titulo" 
+    />
+  </mat-form-field>
+
+  <!-- step="0.01" -> duas casas decimais -->
+  <mat-form-field>
+    <mat-label>Valor</mat-label>
+    <mat-icon matPrefix>attach_money</mat-icon>
+    <input matInput 
+      name="valor"
+      type="number"
+      required 
+      placeholder="Informe o valor " 
+      [(ngModel)]="produto.valor" 
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Descricao</mat-label>
+    <input matInput 
+      name="descricao"
+      required 
+      placeholder="Informe a descricao" 
+      [(ngModel)]="produto.descricao" 
+    />
+  </mat-form-field>
+    
+</form>
+
+<mat-toolbar class="form-toolbar">
+  <button mat-raised-button color="accent" (click)="salvar()">
+    Salvar
+  </button>
+  <span class="espac20px"></span>
+  <button mat-raised-button (click)="voltar(form)">
+    Voltar
+  </button>
+</mat-toolbar>

@@ -1,0 +1,8 @@
+<button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Menu principal">menu</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <a [routerLink]="['/categoria']" mat-menu-item>Categoria</a>
+  <a [routerLink]="['/produto']" mat-menu-item>Produto</a>
+
+</mat-menu>
