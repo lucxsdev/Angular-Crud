@@ -30,6 +30,8 @@ import { ProdutoFormComponent } from './produto/produto-form/produto-form.compon
 import { CategoriaListComponent } from './categoria/categoria-list/categoria-list.component';
 import { CategoriaFormComponent } from './categoria/categoria-form/categoria-form.component';
 import { IndexComponent } from './ui/index/index.component';
+import { UsuarioListComponent } from './usuario/usuario-list/usuario-list.component';
+import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { IndexComponent } from './ui/index/index.component';
     ProdutoFormComponent,
     CategoriaListComponent,
     CategoriaFormComponent,
-    IndexComponent
+    IndexComponent,
+    UsuarioListComponent,
+    UsuarioFormComponent
   ],
   imports: [
     BrowserModule,

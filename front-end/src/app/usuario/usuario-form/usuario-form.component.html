@@ -1,0 +1,46 @@
+<h1>{{ titulo }}</h1>
+
+<form #form="ngForm">
+   
+  <mat-form-field>
+    <mat-label>Usuário</mat-label>
+    <input matInput 
+      name="usuario"
+      required 
+      placeholder="Informe o nome da usuario" 
+      [(ngModel)]="usuario.usuario" 
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>E-mail</mat-label>
+    <input matInput 
+      name="email"
+      required 
+      placeholder="Informe o email" 
+      [(ngModel)]="usuario.email" 
+    />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Senha</mat-label>
+    <input matInput 
+      name="senha"
+      type="password"
+      required 
+      placeholder="Informe a senha" 
+      [(ngModel)]="usuario.senha" 
+    />
+  </mat-form-field>
+    
+</form>
+
+<mat-toolbar class="form-toolbar">
+  <button mat-raised-button color="accent" (click)="salvar()">
+    Salvar
+  </button>
+  <span class="espac20px"></span>
+  <button mat-raised-button (click)="voltar(form)">
+    Voltar
+  </button>
+</mat-toolbar>
